@@ -276,7 +276,7 @@
       const name=document.getElementById('guestName').value.trim();if(!name){document.getElementById('guestName').focus();return}
       const answer=form.querySelector('input[name="attendance"]:checked').value;
       const note=document.getElementById('guestMessage').value.trim();
-      responseMessage=`¡Hola, Adán! 🎉\nSoy ${name}.\n\nConfirmación para el 3 de noviembre a las 6:30 p. m.:\n${answer === 'Sí, asistiré' ? '✅ ¡Sí, ahí estaré!' : '❌ No podré asistir.'}${note?'\n\nMensaje: '+note:''}\n\n¡Gracias por la invitación!`;
+      responseMessage=`¡Hola 🎉\nSoy ${name}.\n\nConfirmación para el 3 de noviembre a las 6:30 p. m.:\n${answer === 'Sí, asistiré' ? '✅ ¡Sí, ahí estaré!' : '❌ No podré asistir.'}${note?'\n\nMensaje: '+note:''}\n\n¡Gracias por la invitación!`;
       document.getElementById('rsvpPreview').textContent=responseMessage;
       modal.classList.add('show');modal.setAttribute('aria-hidden','false');document.getElementById('closeModal').focus();
       if(!prefersLessMotion && answer==='Sí, asistiré')celebrate(18);
